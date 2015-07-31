@@ -1,0 +1,20 @@
+{
+  "name": "phpem/talks",
+  "description": "A package to list and find the latest PHP East Midlands talks.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "brunty",
+      "email": "matt@mfyu.co.uk"
+    }
+  ],
+  "require": {
+    "league/climate": "^3.1"
+  },
+  "bin": ["phpem"],
+  "scripts": {
+    "post-package-install": [
+      "php phpem"
+    ]
+  }
+}

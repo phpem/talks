@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+require 'vendor/autoload.php';
+
+$climate = new League\CLImate\CLImate;
+$climate->addArt('resources/ascii');
+$climate->draw('phpem');
