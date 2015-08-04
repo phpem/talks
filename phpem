@@ -30,3 +30,4 @@ $climate->info('Where to find us!');
 $padding->label('Website')->result('http://phpem.uk');
 $padding->label('Events')->result('http://www.meetup.com/ugPHPem/');
 $padding->label('Twitter')->result('http://twitter.com/phpem');
+$padding->lablel('Slack')->result('http://slack.phpem.uk/');
