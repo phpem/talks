@@ -6,15 +6,20 @@
     {
       "name": "brunty",
       "email": "matt@mfyu.co.uk"
+    },
+    {
+      "name": "Antonis Pavlakis",
+      "email": "antonis@pavlakis.info"
     }
   ],
   "require": {
-    "league/climate": "^3.1"
+    "league/climate": "^3.1",
+    "guzzlehttp/guzzle": "~6.0"
   },
-  "bin": ["phpem"],
+  "bin": ["./phpem"],
   "scripts": {
     "post-autoload-dump": [
-      "echo 'Here I am'"
+      "./phpem"
     ]
   }
 }
