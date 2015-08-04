@@ -3,6 +3,12 @@
 
 require 'vendor/autoload.php';
 
+$httpClient = new GuzzleHttp\Client();
+
+$response = $httpClient->get('https://phpem-talks.herokuapp.com/');
+
+$event = json_decode($response->getBody()->getContents(), true);
+
 $climate = new League\CLImate\CLImate;
 
 // Who doesn't love ASCII art?
@@ -13,10 +19,10 @@ $climate->draw('phpem');
 $padding = $climate->padding(15)->char(' ');
 
 $climate->info('The details of our next talk are as follows:');
-$padding->label('Subject')->result('What to expect from PHP 7');
-$padding->label('Speaker')->result('Lorna Mitchell (@lornajane) ');
-$padding->label('Date & Time')->result('Thursday, August 6, 2015 at 7pm');
-$padding->label('Location')->result('De Montfort University, The Gateway, Room 3.13, LE1 9BH');
+$padding->label('Subject')->result($event['subject']);
+$padding->label('Speaker')->result($event['speaker']);
+$padding->label('Date & Time')->result($event['date_time']);
+$padding->label('Location')->result($event['location']);
 
 $climate->br();
 
